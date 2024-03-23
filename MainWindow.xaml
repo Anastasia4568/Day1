@@ -1,0 +1,90 @@
+﻿<Window x:Class="RealEstateAgency.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RealEstateAgency"
+        mc:Ignorable="d" Icon="Image/logo.png"
+        Title="Агентство недвижимости" WindowStartupLocation="CenterScreen" MinHeight="450" Height="450" MinWidth="800" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border CornerRadius="20" Margin="10" Background="#eceff1">
+            <StackPanel Orientation="Vertical">
+                <Image Source="Image/logo.png" Margin="10"/>
+                <Button x:Name="ClientsButtom" Content="Меню клиента" Click="ClientsButtom_Click"/>
+                <Button x:Name="AgentsButton" Content="Меню риэлтора" Click="AgentsButton_Click "/>
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="ClientsWindow" Visibility="Visible" Grid.Column="1" Background="#04a0ff" CornerRadius="20" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Меню клиента" FontSize="24" HorizontalAlignment="Center"/>
+
+                <UniformGrid Grid.Row="1" Rows="1">
+                    <TextBlock Text="Введите значение для поиска:"/>
+                    <TextBox x:Name="FindClientinput" TextChanged="FindClientinput_TextChanged"/>
+                </UniformGrid>
+
+                <DataGrid x:Name="ClientsOutput" Grid.Row="2" IsReadOnly="True" CanUserAddRows="False" AutoGenerateColumns="False" CanUserDeleteRows="False" ColumnWidth="*">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding FirstName}"/>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding MiddleName}"/>
+                        <DataGridTextColumn Header="Отчество" Binding="{Binding LastName}"/>
+                        <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}"/>
+                        <DataGridTextColumn Header="Эл. почта" Binding="{Binding Email}"/>
+                    </DataGrid.Columns>
+                </DataGrid>               
+
+                <UniformGrid Grid.Row="3" Rows="1">
+                    <Button x:Name="AddClientButton" Content="Добавление" Click="AddClientButton_Click"/>
+                    <Button x:Name="ReplaseClientButton" Content="Редактирование" Click="ReplaseClientButton_Click"/>
+                    <Button x:Name="RemoveClientButton" Content="Удаление" Click="RemoveClientButton_Click"/>
+                </UniformGrid>               
+            </Grid>            
+        </Border>
+
+        <Border x:Name="AgentsWindow" Visibility="Hidden" Grid.Column="1" Background="#04a0ff" CornerRadius="20" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Меню риэлтора" FontSize="24" HorizontalAlignment="Center"/>
+
+                <UniformGrid Grid.Row="1" Rows="1">
+                    <TextBlock Text="Введите значение для поиска:"/>
+                    <TextBox x:Name="FindAgentInput" TextChanged="FindAgentInput_TextChanged"/>
+                </UniformGrid>
+
+                <DataGrid x:Name="AgentsOutput" IsReadOnly="True" Grid.Row="2" CanUserAddRows="False" AutoGenerateColumns="False" CanUserDeleteRows="False" ColumnWidth="*">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding FirstName}"/>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding MiddleName}"/>
+                        <DataGridTextColumn Header="Отчество" Binding="{Binding LastName}"/>
+                        <DataGridTextColumn Header="Процент от сделки" Binding="{Binding DealShare}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <UniformGrid Grid.Row="3" Rows="1">
+                    <Button x:Name="AddAgentButton" Content="Добавление" Click="AddAgentButton_Click"/>
+                    <Button x:Name="ReplaseAgentButton" Content="Редактирование" Click="ReplaseAgentButton_Click"/>
+                    <Button x:Name="RemoveAgentButton" Content="Удаление" Click="RemoveAgentButton_Click"/>
+                </UniformGrid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

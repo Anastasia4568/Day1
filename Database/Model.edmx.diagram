@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e8cd5c59681246ec82c3b7d59a35ea30" Name="Diagram1">
+        <EntityTypeShape EntityType="RealEstateAgencyModel.Agents" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.Clients" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.Deal" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.Districts" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.Object" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.ObjectDemands" Width="1.5" PointX="6" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.Offer" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.RealEstate" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__Deal__AgentId__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__ObjectDem__Agent__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__Deal__BuyerId__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__Deal__SalesManId__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__ObjectDem__Clien__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__Offer__SalesManI__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__Deal__ObjectDema__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__Deal__OfferId__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__Object__RealEsta__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__ObjectDem__RealE__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__Offer__RealEstat__4D94879B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
